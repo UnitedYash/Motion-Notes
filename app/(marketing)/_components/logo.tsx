@@ -1,4 +1,3 @@
-import Image from "next/image";
 
 import { Poppins } from "next/font/google";
 
@@ -15,6 +14,7 @@ export const Logo = () => {
             <p className={cn("font-semibold", font.className)}>
                 Motion
             </p>
+
         </div>
     )
 }
