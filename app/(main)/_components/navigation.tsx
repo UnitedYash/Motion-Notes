@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import { ChevronsLeft, MenuIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
-import { ElementRef, useRef, useState } from "react";
+import { ElementRef, useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "usehooks-ts";
 
 export const Navigation = () => {
@@ -15,6 +15,20 @@ export const Navigation = () => {
     const navBarRef = useRef<ElementRef<"div">>(null);
     const [isResetting, setIsResetting] = useState(false);
     const [isCollapsed, setIsCollapsed] = useState(isMobile);
+
+    useEffect(() => {
+        if (isMobile) {
+            collapse();
+        } else {
+            resetWidth();
+        }
+    }, [isMobile]);
+    useEffect(() => {
+        if(isMobile) {
+            collapse();
+        }
+    }, [pathname, isMobile]);
+    
     const handleMouseDown = (
         event: React.MouseEvent<HTMLDivElement, MouseEvent>
     ) => {
@@ -61,6 +75,19 @@ export const Navigation = () => {
         }
     }
 
+    const collapse = () => {
+        if (sideBarRef.current && navBarRef.current ) {
+            setIsCollapsed(true);
+            setIsResetting(true);
+
+            sideBarRef.current.style.width = "0";
+            navBarRef.current.style.setProperty("width", "100%");
+            navBarRef.current.style.setProperty("left", "0");
+            setTimeout(() => setIsResetting(false), 300);
+
+        }
+    }
+
     return (
         <>
             <aside
@@ -71,13 +98,12 @@ export const Navigation = () => {
                     isMobile && "w-0"
                 )}
             >
-                <div 
-                    role="button"
-                    className={cn("h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition",
-                        isMobile && "opacity-100"
-                    )}
-                >
-                    <ChevronsLeft className="h-6 w-6"/>
+                <div className={cn(`w-6 h-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute
+                        top-3 right-2 opacity-0 group-hover/sidebar:opacity-100 transition`,
+                        isMobile && 'opacity-100')} 
+                onClick={collapse}
+                role="button">
+                    <ChevronsLeft className="w-6 h-6"/>
                 </div>
                 <div>
                     <p>Action items</p>
@@ -101,11 +127,9 @@ export const Navigation = () => {
                     isResetting && "left-0 w-full"
                 )}
             >
-                <nav className="bg-transparent px-3 py-2 w-4">
-                    {isCollapsed && <MenuIcon role="button" className="h-6
-                    w-6 text-muted-foreground" />}
+                <nav className="bg-transparent px-3 py-2 w-full">
+                    {isCollapsed && <MenuIcon className="w-6 h-6 text-muted-foreground" onClick={resetWidth} role="button"/>}
                 </nav>
-
             </div>
         </>
         
