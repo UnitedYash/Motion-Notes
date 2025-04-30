@@ -30,7 +30,7 @@ export const Navigation = () => {
         let newWidth = event.clientX;
 
         if (newWidth < 240) newWidth = 240;
-        if (newWidth > 480) newWidth = 240;
+        if (newWidth > 480) newWidth = 480;
 
         if (sideBarRef.current && navBarRef.current) {
             sideBarRef.current.style.width = `${newWidth}px`;
