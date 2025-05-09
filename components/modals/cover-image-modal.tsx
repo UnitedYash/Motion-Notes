@@ -5,7 +5,7 @@ import {
     DialogContent,
     DialogHeader
 } from "@/components/ui/dialog";
-import { useCoverImage } from "@/hooks/use-conver-image";
+import { useCoverImage } from "@/hooks/use-cover-image";
 
 import { SingleImageDropzone } from "../single-image-dropzone";
 import { useState } from "react";
