@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@blocknote/core": "^0.30.0",
+    "@blocknote/mantine": "^0.30.0",
     "@blocknote/react": "^0.30.0",
     "@clerk/clerk-react": "^5.30.0",
     "@edgestore/react": "^0.4.0",
