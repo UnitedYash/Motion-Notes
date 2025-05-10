@@ -7,27 +7,21 @@ import { Cover } from "@/components/cover";
 import { Skeleton } from "@/components/ui/skeleton";
 import dynamic from "next/dynamic";
 import { useMemo } from "react";
+import { useParams } from "next/navigation"; // Import useParams
 
+const DocumentIdPage = () => {
+   const params = useParams(); // Use useParams to access route parameters
+   const documentId = params?.documentId as Id<"documents">; // Safely access documentId
 
-interface DocumentIdPageProps {
-    params: {
-        documentId: Id<"documents">;
-    };
-};
-
-
-const DocumentIdPage = ({
-    params
-}: DocumentIdPageProps) => {
    const Editor = useMemo(() => dynamic(() => import("@/components/editor"), { ssr: false}), []);
    const document = useQuery(api.documents.getById, {
-    documentId: params.documentId
+    documentId: documentId,
    });
    const update = useMutation(api.documents.update);
 
    const onChange = (content: string) => {
     update({
-        id: params.documentId,
+        id: documentId,
         content
         });
     };
@@ -46,11 +40,11 @@ const DocumentIdPage = ({
                 </div>
             </div>
         </div>
-    )
+    );
    }
 
    if (document === null) {
-    return <div>Not found</div>
+    return <div>Not found</div>;
    }
 
     return (
@@ -58,14 +52,13 @@ const DocumentIdPage = ({
             <Cover url={document.coverImage}/>
             <div className="md:max-w-3xl lg:max-w-4xl mx-auto">
                 <Toolbar initialData={document} />
-                <Editor 
+                <Editor
                     onChange={onChange}
                     initialContent = {document.content}
-                    
                 />
             </div>
         </div>
       );
-}
- 
+};
+
 export default DocumentIdPage;
