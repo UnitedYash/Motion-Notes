@@ -12,13 +12,13 @@ import { FileIcon } from "lucide-react";
 
 
 interface DocumentListProps {
-    parentDocumnetId?: Id<"documents">;
+    parentDocumentId?: Id<"documents">;
     level?: number;
     data?: Doc<"documents">[];
 }
 
 export const DocumentList = ({
-    parentDocumnetId,
+    parentDocumentId,
     level = 0
 }: DocumentListProps) => {
     const params = useParams();
@@ -34,7 +34,7 @@ export const DocumentList = ({
 
 
     const documents = useQuery(api.documents.getSideBar, {
-        parentDocument: parentDocumnetId
+        parentDocument: parentDocumentId
     });
 
     const onRedirect = (documentId: string) => {
@@ -81,7 +81,7 @@ export const DocumentList = ({
                     />
                     {expanded[document._id] && (
                         <DocumentList
-                            parentDocumnetId={document._id}
+                            parentDocumentId={document._id}
                             level={level + 1}
                         />
                     )}

@@ -9,7 +9,7 @@ import dynamic from "next/dynamic";
 import { useMemo } from "react";
 
 
-interface DocuemntIdPageProps {
+interface DocumentIdPageProps {
     params: {
         documentId: Id<"documents">;
     };
@@ -18,7 +18,7 @@ interface DocuemntIdPageProps {
 
 const DocumentIdPage = ({
     params
-}: DocuemntIdPageProps) => {
+}: DocumentIdPageProps) => {
    const Editor = useMemo(() => dynamic(() => import("@/components/editor"), { ssr: false}), []);
    const document = useQuery(api.documents.getById, {
     documentId: params.documentId

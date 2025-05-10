@@ -1,6 +1,6 @@
 "use client";
 
-import EmojiPicker, { Emoji, Theme } from "emoji-picker-react";
+import EmojiPicker, { Theme } from "emoji-picker-react";
 import { useTheme } from "next-themes";
 
 import {
@@ -31,7 +31,7 @@ export const IconPicker = ({
 
     return (
         <Popover>
-            <PopoverTrigger asChild>
+            <PopoverTrigger asChild={asChild}>
                 {children}
             </PopoverTrigger>
             <PopoverContent className="p-0 w-full border-none shadow-none">
