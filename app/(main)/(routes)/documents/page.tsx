@@ -10,7 +10,7 @@ import { toast } from "sonner";
 import { useRouter } from "next/navigation";
 
 
-const DocumentsPage = () => {
+export default function DocumentsPage () {
     const router = useRouter();
     const { user } = useUser();
     const create = useMutation(api.documents.create);
@@ -51,5 +51,3 @@ const DocumentsPage = () => {
         </div>
      );
 }
- 
-export default DocumentsPage;
