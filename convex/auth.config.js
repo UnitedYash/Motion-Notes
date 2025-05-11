@@ -1,8 +1,8 @@
 export default {
-    providers: [
-      {
-        domain: "https://calm-goat-73.clerk.accounts.dev",
-        applicationID: "convex",
-      },
-    ]
-  };
+  providers: [
+    {
+      domain: process.env.VITE_CLERK_FRONTEND_API_URL,
+      applicationID: "convex",
+    },
+  ]
+};
