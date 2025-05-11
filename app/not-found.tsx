@@ -1,10 +1,9 @@
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
-const Error = () => {
+const Error = async () => {
     return ( 
         <div className="h-full flex flex-col items-center justify-center space-y-4">
             <Image 
