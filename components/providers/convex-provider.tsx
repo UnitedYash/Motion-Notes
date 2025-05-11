@@ -15,9 +15,6 @@ export const ConvexClientProvider = ({
 }: {
     children: ReactNode;
 }) => {
-    // okay now rebuild, ithink we have problems with using clerk in convex, still same error do F1 > restart TS server
-    //ok I did it wait rebuild same error ? wait its fixed, omg. yep some implementation issues :^ damn :D 
-    //thanks a lot
     return (
         
      
