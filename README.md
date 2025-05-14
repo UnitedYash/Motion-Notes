@@ -40,7 +40,7 @@ bash
 Copy
 Edit
 # Clone the repo
-git clone https://github.com/yourusername/notion-clone.git
+git clone https://github.com/yourusername/notion-clone.git](https://github.com/UnitedYash/Motion-Notes.git
 cd notion-clone
 
 # Install dependencies
@@ -66,7 +66,6 @@ Make sure your database is set up and configured in .env.
  Keyboard shortcuts
 
 🌐 Live Demo
-(Optional: Link to a deployed version on Vercel, Netlify, etc.)
 
 🔗 Visit the App
 https://motion-notes-five.vercel.app/
