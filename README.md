@@ -61,6 +61,8 @@ Make sure your database is set up and configured in .env.
 
 <img width="1221" alt="image" src="https://github.com/user-attachments/assets/e8eafc6d-2bfe-452e-8757-cac7fb262a30" />
 
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/d078000b-181c-4d9b-a490-96c8e21cb63d" />
+
 
 ## 🧪 Roadmap
  Nested page structure
