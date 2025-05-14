@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 Notion Clone
+A full-featured Notion-like note-taking app built to replicate the core functionalities of Notion — including nested pages, rich text editing, drag-and-drop blocks, and a sleek minimal UI. This project serves as a learning experience in modern full-stack development and collaborative document editing.
 
-## Getting Started
+## 🚀 Features
+📝 Rich Text Editor (bold, italic, headings, lists, etc.)
 
-First, run the development server:
+📁 Nested Pages with hierarchical navigation
 
-```bash
+📦 Drag-and-Drop Blocks for flexible content structure
+
+🌙 Dark Mode toggle
+
+🔄 Auto Save functionality
+
+🔗 Public Page Sharing
+
+👥 (Optional) Real-time Collaboration using WebSockets
+
+## 🛠️ Tech Stack
+Frontend:
+
+React / Next.js
+
+TypeScript
+
+Tailwind CSS
+
+Blocknote for text-editor
+## Backend:
+
+Node.js + Next.js
+
+Convex for storing data and retrival
+
+Clerk Auth for authentication
+
+## 📦 Installation
+``` 
+bash
+Copy
+Edit
+# Clone the repo
+git clone https://github.com/yourusername/notion-clone.git
+cd notion-clone
+
+# Install dependencies
+npm install
+
+# Set up environment variables
+cp .env.example .env
+
+# Start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+Make sure your database is set up and configured in .env.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🧪 Roadmap
+ Nested page structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+ Block-based editor
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+ User authentication
 
-## Learn More
+ Image uploads and media embedding
 
-To learn more about Next.js, take a look at the following resources:
+ Keyboard shortcuts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+🌐 Live Demo
+(Optional: Link to a deployed version on Vercel, Netlify, etc.)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+🔗 Visit the App
+https://motion-notes-five.vercel.app/
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
