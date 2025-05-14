@@ -56,6 +56,11 @@ cp .env.example .env
 npm run dev
 ```
 Make sure your database is set up and configured in .env.
+## Screenshots
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/a5666308-fe24-447f-90fd-817bef0a1ec5" />
+
+<img width="1221" alt="image" src="https://github.com/user-attachments/assets/e8eafc6d-2bfe-452e-8757-cac7fb262a30" />
+
 
 ## 🧪 Roadmap
  Nested page structure
