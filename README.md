@@ -35,10 +35,11 @@ Convex for storing data and retrival
 Clerk Auth for authentication
 
 ## 📦 Installation
-``` 
+
 bash
 Copy
 Edit
+```
 # Clone the repo
 git clone https://github.com/yourusername/notion-clone.git](https://github.com/UnitedYash/Motion-Notes.git
 cd notion-clone
