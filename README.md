@@ -30,7 +30,7 @@ Tailwind CSS
 Blocknote for text-editor
 ## Backend:
 
-Node.js + Next.js
+Node.js
 
 Convex for storing data and retrival
 
