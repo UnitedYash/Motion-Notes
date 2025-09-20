@@ -16,7 +16,7 @@ A full-featured Notion-like note-taking app built to replicate the core function
 
 🔗 Public Page Sharing
 
-👥 (Optional) Real-time Collaboration using WebSockets
+
 
 ## 🛠️ Tech Stack
 Frontend:
